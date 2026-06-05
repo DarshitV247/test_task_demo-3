@@ -39,24 +39,48 @@ export default function Hero() {
           </p>
 
           {/* CTA Button */}
-          <button
-            className="
-              mt-6
-              rounded-full
-              bg-[#04A14C]
-              px-8
-              py-4
-              text-lg
-              font-semibold
-              text-white
-              transition-all
-              duration-300
-              hover:bg-[#038A40]
-              hover:scale-105
-            "
-          >
-            Our Services →
-          </button>
+        {/* CTA Buttons */}
+<div className="mt-6 flex flex-wrap gap-4">
+  <button
+    className="
+      rounded-full
+      bg-[#04A14C]
+      px-8
+      py-4
+      text-lg
+      font-semibold
+      text-white
+      transition-all
+      duration-300
+      hover:bg-[#038A40]
+      hover:scale-105
+    "
+  >
+    Our Services →
+  </button>
+
+  <button
+    className="
+      rounded-full
+      border-2
+      border-white
+      bg-white/10
+      backdrop-blur-md
+      px-8
+      py-4
+      text-lg
+      font-semibold
+      text-white
+      transition-all
+      duration-300
+      hover:bg-white
+      hover:text-[#041B2D]
+      hover:scale-105
+    "
+  >
+    Get A Quote
+  </button>
+</div>
         </div>
       </div>
     </section>

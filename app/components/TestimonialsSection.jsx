@@ -29,7 +29,7 @@ const testimonials = [
     role: "Homeowner",
     image: "/images/client-4.png",
     review:
-      "Very professional crew. They arrived on time and made our home look brand new.",
+      "Very professional crew. They arrived on time , explained the entire cleaning process, and paid close attention to every detail.The results exceeded our expectations.",
   },
 ];
 
