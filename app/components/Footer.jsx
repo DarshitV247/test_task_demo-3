@@ -18,8 +18,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative mt-24 overflow-hidden">
-      {/* Background Image */}
+    <footer className="relative mt-[clamp(3rem,6vw,6rem)] overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0">
         <Image
           src="/images/footer-bg.jpg"
@@ -28,15 +28,31 @@ export default function Footer() {
           className="object-cover"
         />
 
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-[#041B2D]/80" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12">
+      {/* Main Content */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-7xl
+          px-[clamp(12px,4vw,40px)]
+          py-[clamp(3rem,5vw,5rem)]
+        "
+      >
         {/* Newsletter */}
         <div className="text-center">
-          <h2 className="text-[32px] font-extrabold leading-tight text-white lg:text-[52px]">
+
+          <h2
+            className="
+              font-extrabold
+              leading-tight
+              text-white
+              text-[clamp(2rem,5vw,3.25rem)]
+            "
+          >
             Join Our{" "}
             <span className="text-[#04A14C]">
               Newsletter
@@ -50,38 +66,54 @@ export default function Footer() {
             Date
           </h2>
 
-          {/* Email Form */}
-          <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-4 md:flex-row">
+          {/* Form */}
+          <div
+            className="
+              mx-auto
+              mt-[clamp(1.5rem,3vw,2rem)]
+              flex
+              w-full
+              max-w-[900px]
+              flex-col
+              gap-[clamp(10px,2vw,16px)]
+              md:flex-row
+            "
+          >
             <input
               type="email"
               placeholder="Email address..."
               className="
-                h-14
+                h-[clamp(50px,7vw,56px)]
+                w-full
                 flex-1
                 rounded-full
                 border-0
                 bg-white
-                px-8
-                text-lg
+                px-[clamp(16px,4vw,32px)]
+                text-[clamp(0.95rem,1vw,1.1rem)]
                 outline-none
+                placeholder:text-slate-400
               "
             />
 
             <button
               className="
                 flex
+                w-full
                 items-center
                 justify-center
-                gap-3
+                gap-2
                 rounded-full
                 bg-[#04A14C]
-                px-8
-                py-4
+                px-[clamp(20px,4vw,32px)]
+                py-[clamp(14px,2vw,16px)]
                 font-semibold
                 text-white
                 transition-all
                 duration-300
                 hover:bg-[#038A40]
+                md:w-auto
+                md:min-w-[220px]
               "
             >
               Subscribe Now
@@ -91,10 +123,17 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="my-14 h-px bg-white/20" />
+        <div className="my-[clamp(2rem,5vw,4rem)] h-px bg-white/20" />
 
         {/* Footer Grid */}
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          className="
+            grid
+            gap-[clamp(2rem,4vw,3rem)]
+            sm:grid-cols-2
+            lg:grid-cols-4
+          "
+        >
           {/* Logo */}
           <div>
             <Image
@@ -102,9 +141,18 @@ export default function Footer() {
               alt="Neighborhood Wash"
               width={180}
               height={70}
+              className="w-[clamp(130px,18vw,180px)] h-auto"
             />
 
-            <p className="mt-6 max-w-xs text-lg leading-relaxed text-white/75">
+            <p
+              className="
+                mt-5
+                max-w-xs
+                leading-relaxed
+                text-white/75
+                text-[clamp(0.95rem,1vw,1.125rem)]
+              "
+            >
               Professional pressure washing services that
               restore beauty, protect surfaces, and increase
               curb appeal.
@@ -113,43 +161,44 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-6 text-3xl font-bold text-white">
+            <h3
+              className="
+                mb-5
+                font-bold
+                text-white
+                text-[clamp(1.5rem,2vw,2rem)]
+              "
+            >
               Quick Links
             </h3>
 
-            <ul className="space-y-4 text-lg text-white/80">
+            <ul
+              className="
+                space-y-3
+                text-white/80
+                text-[clamp(0.95rem,1vw,1.1rem)]
+              "
+            >
               <li>
-                <a
-                  href="#"
-                  className="transition hover:text-[#04A14C]"
-                >
+                <a href="#" className="transition hover:text-[#04A14C]">
                   About Us
                 </a>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  className="transition hover:text-[#04A14C]"
-                >
+                <a href="#" className="transition hover:text-[#04A14C]">
                   Services
                 </a>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  className="transition hover:text-[#04A14C]"
-                >
+                <a href="#" className="transition hover:text-[#04A14C]">
                   Projects
                 </a>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  className="transition hover:text-[#04A14C]"
-                >
+                <a href="#" className="transition hover:text-[#04A14C]">
                   Contact
                 </a>
               </li>
@@ -158,11 +207,24 @@ export default function Footer() {
 
           {/* Working Hours */}
           <div>
-            <h3 className="mb-6 text-3xl font-bold text-white">
+            <h3
+              className="
+                mb-5
+                font-bold
+                text-white
+                text-[clamp(1.5rem,2vw,2rem)]
+              "
+            >
               Working Time
             </h3>
 
-            <div className="space-y-4 text-lg text-white/80">
+            <div
+              className="
+                space-y-3
+                text-white/80
+                text-[clamp(0.95rem,1vw,1.1rem)]
+              "
+            >
               <p>Mon - Sat: 8:00am - 8:00pm</p>
 
               <p>Sunday: 9:00am - 12:00pm</p>
@@ -171,30 +233,29 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            {/* Phone */}
+
             <div className="flex items-center gap-3">
               <Phone
-                size={24}
-                className="text-[#04A14C] shrink-0"
+                size={22}
+                className="shrink-0 text-[#04A14C]"
               />
 
               <a
                 href="tel:5405958008"
                 className="
-                  text-2xl
                   font-bold
                   text-[#04A14C]
                   hover:underline
+                  text-[clamp(1.2rem,2vw,1.8rem)]
                 "
               >
                 5405958008
               </a>
             </div>
 
-            {/* Email */}
-            <div className="mt-6 flex items-start gap-3">
+            <div className="mt-5 flex items-start gap-3">
               <Mail
-                size={24}
+                size={22}
                 className="mt-1 shrink-0 text-[#04A14C]"
               />
 
@@ -202,54 +263,73 @@ export default function Footer() {
                 href="mailto:kyla.neighborhoodwash@gmail.com"
                 className="
                   break-all
-                  text-xl
-                  font-semibold
                   text-white
                   transition
                   hover:text-[#04A14C]
+                  text-[clamp(0.9rem,1vw,1.15rem)]
                 "
               >
                 kyla.neighborhoodwash@gmail.com
               </a>
             </div>
 
-            {/* Address */}
-            <div className="mt-6 flex gap-3 text-white/80">
+            <div
+              className="
+                mt-5
+                flex
+                gap-3
+                text-white/80
+                text-[clamp(0.95rem,1vw,1.1rem)]
+              "
+            >
               <MapPin
-                className="mt-1 shrink-0 text-[#04A14C]"
                 size={22}
+                className="mt-1 shrink-0 text-[#04A14C]"
               />
 
               <p>
-                Roanoke, Virginia,
+                Roanoke, Virginia
                 <br />
                 United States
               </p>
             </div>
+
           </div>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="relative z-10 border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-6">
-          <p className="text-center text-white/70">
+        <div
+          className="
+            mx-auto
+            flex
+            max-w-7xl
+            items-center
+            justify-center
+            px-[clamp(12px,4vw,40px)]
+            py-6
+          "
+        >
+          <p
+            className="
+              text-center
+              text-white/70
+              text-[clamp(0.85rem,1vw,1rem)]
+            "
+          >
             © 2026 Neighborhood Wash. All Rights Reserved.
           </p>
         </div>
       </div>
 
-      {/* Scroll Top Button */}
+      {/* Scroll To Top */}
       <button
         onClick={scrollToTop}
         className="
           fixed
-          bottom-8
-          right-8
           z-50
           flex
-          h-14
-          w-14
           items-center
           justify-center
           rounded-full
@@ -259,6 +339,10 @@ export default function Footer() {
           transition-all
           duration-300
           hover:scale-110
+          bottom-[clamp(16px,3vw,32px)]
+          right-[clamp(16px,3vw,32px)]
+          h-[clamp(48px,5vw,56px)]
+          w-[clamp(48px,5vw,56px)]
         "
       >
         <ArrowUp size={22} />

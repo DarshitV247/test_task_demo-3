@@ -35,11 +35,18 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#F7F6F3] py-20">
-      <div className="mx-auto max-w-[1700px] px-6">
+    <section className="bg-[#F7F6F3] py-[clamp(3rem,6vw,5rem)]">
+      <div className="mx-auto max-w-[1700px] px-[clamp(12px,4vw,40px)]">
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-
+        <div
+          className="
+            grid
+            gap-[clamp(14px,2vw,32px)]
+            grid-cols-1
+            sm:grid-cols-2
+            xl:grid-cols-4
+          "
+        >
           {services.map((service, index) => {
             const Icon = service.icon;
 
@@ -49,10 +56,10 @@ export default function ServicesSection() {
                 className="
                   group
                   relative
-                  h-[290px]
-                  rounded-[32px]
+                  h-[clamp(250px,24vw,290px)]
+                  rounded-[clamp(24px,3vw,32px)]
                   bg-white
-                  p-8
+                  p-[clamp(16px,2.5vw,32px)]
                   shadow-sm
                   transition-all
                   duration-300
@@ -61,17 +68,23 @@ export default function ServicesSection() {
                 "
               >
                 {/* Top Section */}
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between gap-3">
 
-                  <h3 className="max-w-[180px] text-[30px] font-bold leading-[1.05] text-[#1D2A3B]">
+                  <h3
+                    className="
+                      max-w-[65%]
+                      font-bold
+                      leading-[1.05]
+                      text-[#1D2A3B]
+                      text-[clamp(1.3rem,2vw,1.875rem)]
+                    "
+                  >
                     {service.title}
                   </h3>
 
                   <div
                     className="
                       flex
-                      h-20
-                      w-20
                       items-center
                       justify-center
                       rounded-full
@@ -80,10 +93,13 @@ export default function ServicesSection() {
                       transition-all
                       duration-300
                       group-hover:scale-110
+                      h-[clamp(58px,6vw,80px)]
+                      w-[clamp(58px,6vw,80px)]
+                      shrink-0
                     "
                   >
                     <Icon
-                      size={34}
+                      size={32}
                       className="service-icon text-white"
                     />
                   </div>
@@ -91,24 +107,45 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Divider */}
-                <div className="my-7 h-px bg-slate-200" />
+                <div className="my-[clamp(18px,2vw,28px)] h-px bg-slate-200" />
 
                 {/* Description */}
-                <p className="text-[18px] leading-relaxed text-slate-600">
+                <p
+                  className="
+                    leading-relaxed
+                    text-slate-600
+                    text-[clamp(0.95rem,1vw,1.125rem)]
+                  "
+                >
                   {service.description}
                 </p>
 
-                {/* Corner Cutout */}
-                <div className="absolute bottom-0 right-0 h-24 w-24 rounded-tl-[32px] bg-[#F7F6F3]" />
+                {/* Original Corner Cutout */}
+                <div
+                  className="
+                    absolute
+                    bottom-0
+                    right-0
+                    bg-[#F7F6F3]
+                    rounded-tl-[clamp(24px,3vw,32px)]
+                    h-[clamp(80px,8vw,96px)]
+                    w-[clamp(80px,8vw,96px)]
+                  "
+                />
 
-                {/* Arrow Button */}
-                <div className="absolute bottom-0 right-0 translate-x-[18%] translate-y-[18%]">
-
+                {/* Original Floating Arrow */}
+                <div
+                  className="
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-[18%]
+                    translate-y-[18%]
+                  "
+                >
                   <div
                     className="
                       flex
-                      h-16
-                      w-16
                       items-center
                       justify-center
                       rounded-full
@@ -119,20 +156,23 @@ export default function ServicesSection() {
                       group-hover:bg-[#04A14C]
                       group-hover:rotate-45
                       group-hover:scale-110
+                      h-[clamp(52px,5vw,64px)]
+                      w-[clamp(52px,5vw,64px)]
                     "
                   >
                     <ArrowRight
                       size={24}
-                      className="text-[#1D2A3B] group-hover:text-white"
+                      className="
+                        text-[#1D2A3B]
+                        group-hover:text-white
+                      "
                     />
                   </div>
-
                 </div>
 
               </div>
             );
           })}
-
         </div>
 
       </div>

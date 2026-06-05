@@ -32,13 +32,26 @@ export default function FeaturedServices() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-[#F7F6F3] py-14">
-      <div className="mx-auto max-w-[1400px] px-6">
+    <section className="bg-[#F7F6F3] py-[clamp(3rem,8vw,7rem)]">
+      <div className="mx-auto max-w-[1600px] px-[clamp(12px,4vw,50px)]">
 
         {/* Heading */}
-        <div className="mb-12 text-center">
+        <div className="mb-[clamp(2rem,5vw,5rem)] text-center">
 
-          <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[4px] text-slate-600">
+          <p
+            className="
+              mb-3
+              flex
+              items-center
+              justify-center
+              gap-2
+              font-bold
+              uppercase
+              tracking-[0.25em]
+              text-slate-600
+              text-[clamp(0.7rem,1vw,0.9rem)]
+            "
+          >
             <span className="text-[#04A14C]">✦</span>
             Featured Services
           </p>
@@ -47,20 +60,15 @@ export default function FeaturedServices() {
             className="
               mx-auto
               max-w-6xl
-              text-[40px]
-              md:text-[52px]
-              lg:text-[64px]
               font-extrabold
-              leading-[1.05]
+              leading-[0.95]
+              tracking-[-0.03em]
               text-[#1D2A3B]
+              text-[clamp(2rem,5vw,4.5rem)]
             "
           >
-            <span className="whitespace-nowrap">
-              Our Company Provides The Best
-            </span>
-
+            Our Company Provides The Best
             <br />
-
             <span className="text-[#04A14C]">
               Cleaning Service
             </span>
@@ -69,84 +77,29 @@ export default function FeaturedServices() {
         </div>
 
         {/* Content */}
-        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+        <div
+          className="
+            grid
+            items-center
+            gap-[clamp(2rem,5vw,5rem)]
+            lg:grid-cols-[0.95fr_1.05fr]
+          "
+        >
 
-          {/* Services List */}
-          <div>
+          {/* Image - First on Mobile */}
+          <div className="order-1 lg:order-2">
 
-            {services.map((service, index) => (
-              <div
-                key={index}
-                onMouseEnter={() => setActiveIndex(index)}
-                className="
-                  group
-                  flex
-                  cursor-pointer
-                  items-center
-                  justify-between
-                  border-b
-                  border-slate-200
-                  py-6
-                  transition-all
-                  duration-300
-                "
-              >
-                <h3
-                  className={`
-                    text-[28px]
-                    lg:text-[34px]
-                    font-bold
-                    transition-all
-                    duration-300
-                    ${
-                      activeIndex === index
-                        ? "text-[#04A14C]"
-                        : "text-[#1D2A3B]"
-                    }
-                  `}
-                >
-                  {service.title}
-                </h3>
-
-                <div
-                  className={`
-                    flex
-                    h-12
-                    w-12
-                    items-center
-                    justify-center
-                    rounded-full
-                    transition-all
-                    duration-300
-                    ${
-                      activeIndex === index
-                        ? "bg-[#04A14C]"
-                        : "bg-white shadow-sm"
-                    }
-                  `}
-                >
-                  <ArrowRight
-                    size={20}
-                    className={
-                      activeIndex === index
-                        ? "text-white"
-                        : "text-[#1D2A3B]"
-                    }
-                  />
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
-          {/* Animated Image */}
-          <div>
-
-            <div className="relative h-[420px] lg:h-[500px] overflow-hidden rounded-[30px] shadow-lg">
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[clamp(20px,3vw,30px)]
+                shadow-lg
+                h-[clamp(260px,45vw,550px)]
+              "
+            >
 
               <AnimatePresence mode="wait">
-
                 <motion.div
                   key={services[activeIndex].image}
                   initial={{
@@ -175,14 +128,83 @@ export default function FeaturedServices() {
                     alt={services[activeIndex].title}
                     fill
                     priority
-                      unoptimized
+                    unoptimized
                     className="object-cover"
                   />
                 </motion.div>
-
               </AnimatePresence>
 
             </div>
+
+          </div>
+
+          {/* Services - Second on Mobile */}
+          <div className="order-2 lg:order-1">
+
+            {services.map((service, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => setActiveIndex(index)}
+                onClick={() => setActiveIndex(index)}
+                className="
+                  group
+                  flex
+                  cursor-pointer
+                  items-center
+                  justify-between
+                  border-b
+                  border-slate-200
+                  py-[clamp(14px,2vw,24px)]
+                  transition-all
+                  duration-300
+                "
+              >
+
+                <h3
+                  className={`
+                    font-bold
+                    transition-all
+                    duration-300
+                    text-[clamp(1.2rem,2.2vw,2.1rem)]
+                    ${
+                      activeIndex === index
+                        ? "text-[#04A14C]"
+                        : "text-[#1D2A3B]"
+                    }
+                  `}
+                >
+                  {service.title}
+                </h3>
+
+                <div
+                  className={`
+                    flex
+                    items-center
+                    justify-center
+                    rounded-full
+                    transition-all
+                    duration-300
+                    h-[clamp(40px,4vw,52px)]
+                    w-[clamp(40px,4vw,52px)]
+                    ${
+                      activeIndex === index
+                        ? "bg-[#04A14C]"
+                        : "bg-white shadow-sm"
+                    }
+                  `}
+                >
+                  <ArrowRight
+                    size={20}
+                    className={
+                      activeIndex === index
+                        ? "text-white"
+                        : "text-[#1D2A3B]"
+                    }
+                  />
+                </div>
+
+              </div>
+            ))}
 
           </div>
 
