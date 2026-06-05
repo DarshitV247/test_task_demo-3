@@ -68,13 +68,8 @@ export default function Navbar() {
 <Link
   href="#home"
   className="
-    rounded-xl
-    bg-white/10
-    backdrop-blur-md
     px-3
     py-2
-    border
-    border-white/10
   "
 >
   <img
@@ -92,17 +87,13 @@ export default function Navbar() {
 />
 </Link>
 <ul
-  className={`
+  className="
     hidden
     lg:flex
     items-center
     gap-[clamp(22px,2vw,50px)]
-    ${
-      scrolled
-        ? "text-[#04A14C]"
-        : "text-white"
-    }
-  `}
+    text-white
+  "
 >
   {links.map((link) => (
     <li key={link.name}>
