@@ -15,6 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: "<!-- Built for PWMP trial by Darshit Virani -->",
+          }}
+        />
         <SmoothScroll />
 
         <Navbar />
