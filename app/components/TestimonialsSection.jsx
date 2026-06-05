@@ -29,49 +29,47 @@ const testimonials = [
     role: "Homeowner",
     image: "/images/client-4.png",
     review:
-      "Very professional crew. They arrived on time , explained the entire cleaning process, and paid close attention to every detail.The results exceeded our expectations.",
+      "Very professional crew. They arrived on time, explained the entire cleaning process, and paid close attention to every detail. The results exceeded our expectations.",
   },
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-[#F7F6F3] py-[6vw]">
-
+    <section className="relative overflow-hidden bg-[#F7F6F3] py-16 md:py-24">
       {/* World Map Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-
         <Image
           src="/images/world-map.png"
           alt="World Map"
           width={1800}
           height={900}
           className="
-            w-[95%]
+            w-[140%]
+            md:w-[95%]
             max-w-[1800px]
             object-contain
-            opacity-[0.12]
+            opacity-[0.08]
+            md:opacity-[0.12]
             select-none
           "
         />
-
       </div>
 
-      <div className="relative z-10 mx-auto w-[95vw] max-w-[1800px]">
-
+      <div className="relative z-10 mx-auto w-[92%] max-w-[1800px]">
         {/* Heading */}
-        <div className="mb-[4vw] text-center">
-
+        <div className="mb-12 md:mb-20 text-center">
           <p
             className="
-              mb-[0.8vw]
+              mb-3
               flex
               items-center
               justify-center
-              gap-[0.5vw]
-              text-[clamp(12px,0.8vw,16px)]
+              gap-2
+              text-sm
+              md:text-base
               font-bold
               uppercase
-              tracking-[0.25vw]
+              tracking-[0.2em]
               text-slate-500
             "
           >
@@ -82,11 +80,13 @@ export default function TestimonialsSection() {
           <h2
             className="
               mx-auto
-              max-w-[60vw]
+              max-w-full
+              md:max-w-[70vw]
+              lg:max-w-[60vw]
               font-extrabold
               leading-[1]
               text-[#1D2A3B]
-              text-[clamp(2.5rem,4.5vw,5.5rem)]
+              text-[clamp(2rem,6vw,5.5rem)]
             "
           >
             Hear What{" "}
@@ -95,28 +95,28 @@ export default function TestimonialsSection() {
             </span>{" "}
             Say
           </h2>
-
         </div>
 
-        {/* Testimonials */}
+        {/* Testimonials Grid */}
         <div
           className="
             grid
-            gap-[1.5vw]
+            gap-8
             md:grid-cols-2
             xl:grid-cols-4
           "
         >
-
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="
                 relative
-                rounded-[1.5vw]
+                rounded-3xl
                 bg-white/95
-                p-[1.2vw]
-                pt-[3vw]
+                p-6
+                pt-14
+                md:p-8
+                md:pt-16
                 text-center
                 shadow-sm
                 border
@@ -127,7 +127,6 @@ export default function TestimonialsSection() {
                 hover:shadow-xl
               "
             >
-
               {/* Avatar */}
               <div
                 className="
@@ -138,17 +137,16 @@ export default function TestimonialsSection() {
                   -translate-y-1/2
                 "
               >
-
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
-                  width={80}
-                  height={80}
+                  width={96}
+                  height={96}
                   className="
-                    h-[4.5vw]
-                    w-[4.5vw]
-                    min-h-[70px]
-                    min-w-[70px]
+                    h-20
+                    w-20
+                    md:h-24
+                    md:w-24
                     rounded-full
                     border-4
                     border-white
@@ -156,14 +154,15 @@ export default function TestimonialsSection() {
                     shadow-md
                   "
                 />
-
               </div>
 
               {/* Review */}
               <p
                 className="
-                  min-h-[8vw]
-                  text-[clamp(0.95rem,1vw,1.15rem)]
+                  min-h-[140px]
+                  md:min-h-[180px]
+                  text-base
+                  md:text-lg
                   leading-[1.8]
                   text-slate-600
                 "
@@ -172,14 +171,15 @@ export default function TestimonialsSection() {
               </p>
 
               {/* Divider */}
-              <div className="my-[1.5vw] h-px bg-slate-200" />
+              <div className="my-6 h-px bg-slate-200" />
 
               {/* Name */}
               <h3
                 className="
                   font-bold
                   text-[#1D2A3B]
-                  text-[clamp(1.5rem,2vw,2.3rem)]
+                  text-2xl
+                  md:text-3xl
                 "
               >
                 {testimonial.name}
@@ -188,21 +188,18 @@ export default function TestimonialsSection() {
               {/* Role */}
               <p
                 className="
-                  mt-[0.4vw]
+                  mt-2
                   text-slate-500
-                  text-[clamp(0.95rem,1vw,1.15rem)]
+                  text-base
+                  md:text-lg
                 "
               >
                 {testimonial.role}
               </p>
-
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
