@@ -1,13 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {
-  ArrowUp,
-  ArrowRight,
-  MapPin,
-  Phone,
-  Mail,
-} from "lucide-react";
+import { ArrowUp, ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -44,7 +38,6 @@ export default function Footer() {
       >
         {/* Newsletter */}
         <div className="text-center">
-
           <h2
             className="
               font-extrabold
@@ -53,17 +46,9 @@ export default function Footer() {
               text-[clamp(2rem,5vw,3.25rem)]
             "
           >
-            Join Our{" "}
-            <span className="text-[#04A14C]">
-              Newsletter
-            </span>
-
+            Join Our <span className="text-[#04A14C]">Newsletter</span>
             <br />
-
-            <span className="text-[#04A14C]">
-              Stay Up To
-            </span>{" "}
-            Date
+            <span className="text-[#04A14C]">Stay Up To</span> Date
           </h2>
 
           {/* Form */}
@@ -126,14 +111,14 @@ export default function Footer() {
         <div className="my-[clamp(2rem,5vw,4rem)] h-px bg-white/20" />
 
         {/* Footer Grid */}
-       <div
-  className="
+        <div
+          className="
     grid
     gap-[clamp(2rem,4vw,3rem)]
     sm:grid-cols-2
   lg:grid-cols-[1fr_1fr_1fr_1.8fr]
   "
->
+        >
           {/* Logo */}
           <div>
             <Image
@@ -141,7 +126,14 @@ export default function Footer() {
               alt="Neighborhood Wash"
               width={180}
               height={70}
-              className="w-[clamp(130px,18vw,180px)] h-auto"
+              className="
+    w-[clamp(130px,18vw,180px)]
+    h-auto
+    brightness-[1.7]
+    contrast-[1.35]
+    saturate-[1.3]
+    drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]
+  "
             />
 
             <p
@@ -154,7 +146,6 @@ export default function Footer() {
               "
             >
               Professional pressure washing services.
-             
             </p>
           </div>
 
@@ -232,12 +223,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-
             <div className="flex items-center gap-3">
-              <Phone
-                size={22}
-                className="shrink-0 text-[#04A14C]"
-              />
+              <Phone size={22} className="shrink-0 text-[#04A14C]" />
 
               <a
                 href="tel:5405958008"
@@ -252,25 +239,22 @@ export default function Footer() {
               </a>
             </div>
 
-<div className="mt-5 flex items-center gap-3">
-  <Mail
-    size={22}
-    className="shrink-0 text-[#04A14C]"
-  />
+            <div className="mt-5 flex items-center gap-3">
+              <Mail size={22} className="shrink-0 text-[#04A14C]" />
 
-  <a
-    href="mailto:kyla.neighborhoodwash@gmail.com"
-    className="
+              <a
+                href="mailto:kyla.neighborhoodwash@gmail.com"
+                className="
       text-white
       transition
       hover:text-[#04A14C]
       text-[clamp(0.95rem,1vw,1.05rem)]
       leading-none
     "
-  >
-    kyla.neighborhoodwash@gmail.com
-  </a>
-</div>
+              >
+                kyla.neighborhoodwash@gmail.com
+              </a>
+            </div>
 
             <div
               className="
@@ -281,10 +265,7 @@ export default function Footer() {
                 text-[clamp(0.95rem,1vw,1.1rem)]
               "
             >
-              <MapPin
-                size={22}
-                className="mt-1 shrink-0 text-[#04A14C]"
-              />
+              <MapPin size={22} className="mt-1 shrink-0 text-[#04A14C]" />
 
               <p>
                 Roanoke, Virginia
@@ -292,7 +273,6 @@ export default function Footer() {
                 United States
               </p>
             </div>
-
           </div>
         </div>
       </div>
