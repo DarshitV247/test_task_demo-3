@@ -126,14 +126,14 @@ export default function Footer() {
         <div className="my-[clamp(2rem,5vw,4rem)] h-px bg-white/20" />
 
         {/* Footer Grid */}
-        <div
-          className="
-            grid
-            gap-[clamp(2rem,4vw,3rem)]
-            sm:grid-cols-2
-            lg:grid-cols-4
-          "
-        >
+       <div
+  className="
+    grid
+    gap-[clamp(2rem,4vw,3rem)]
+    sm:grid-cols-2
+  lg:grid-cols-[1fr_1fr_1fr_1.8fr]
+  "
+>
           {/* Logo */}
           <div>
             <Image
@@ -153,9 +153,8 @@ export default function Footer() {
                 text-[clamp(0.95rem,1vw,1.125rem)]
               "
             >
-              Professional pressure washing services that
-              restore beauty, protect surfaces, and increase
-              curb appeal.
+              Professional pressure washing services.
+             
             </p>
           </div>
 
@@ -249,29 +248,29 @@ export default function Footer() {
                   text-[clamp(1.2rem,2vw,1.8rem)]
                 "
               >
-                5405958008
+                (540)5958008
               </a>
             </div>
 
-            <div className="mt-5 flex items-start gap-3">
-              <Mail
-                size={22}
-                className="mt-1 shrink-0 text-[#04A14C]"
-              />
+<div className="mt-5 flex items-center gap-3">
+  <Mail
+    size={22}
+    className="shrink-0 text-[#04A14C]"
+  />
 
-              <a
-                href="mailto:kyla.neighborhoodwash@gmail.com"
-                className="
-                  break-all
-                  text-white
-                  transition
-                  hover:text-[#04A14C]
-                  text-[clamp(0.9rem,1vw,1.15rem)]
-                "
-              >
-                kyla.neighborhoodwash@gmail.com
-              </a>
-            </div>
+  <a
+    href="mailto:kyla.neighborhoodwash@gmail.com"
+    className="
+      text-white
+      transition
+      hover:text-[#04A14C]
+      text-[clamp(0.95rem,1vw,1.05rem)]
+      leading-none
+    "
+  >
+    kyla.neighborhoodwash@gmail.com
+  </a>
+</div>
 
             <div
               className="

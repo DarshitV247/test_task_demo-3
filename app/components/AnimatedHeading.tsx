@@ -36,24 +36,31 @@ export default function AnimatedHeading() {
   }, []);
 
   return (
-    <div className="h-[220px] lg:h-[260px]">
+    <div className="min-h-[160px] lg:min-h-[250px]">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -40 }}
-          transition={{ duration: 0.8 }}
+          exit={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.7 }}
         >
-          <h1 className="font-extrabold leading-[0.9] text-white">
-            <span className="block text-5xl md:text-6xl lg:text-[85px]">
+          <h1
+            className="
+              font-extrabold
+              leading-[1.02]
+              tracking-[-0.03em]
+              text-white
+            "
+          >
+            <span className="block text-[clamp(3rem,6vw,6.5rem)]">
               {headlines[index].line1}{" "}
               <span className="text-[#04A14C]">
                 {headlines[index].highlight1}
               </span>
             </span>
 
-            <span className="block text-5xl md:text-6xl lg:text-[85px]">
+            <span className="block text-[clamp(3rem,6vw,6.5rem)]">
               {headlines[index].line2}{" "}
               <span className="text-[#04A14C]">
                 {headlines[index].highlight2}

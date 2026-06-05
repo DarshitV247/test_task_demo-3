@@ -24,6 +24,7 @@ body {
 } */
 
 /* Marquee */
+/* Marquee */
 .marquee-container {
   width: 100%;
   overflow: hidden;
@@ -38,11 +39,12 @@ body {
 }
 
 .marquee-track span {
-  font-size: 120px;
+  font-size: clamp(60px, 6vw, 120px);
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.05);
+color: rgba(70, 86, 110, 0.25);
   text-transform: uppercase;
-  padding-right: 100px;
+  padding-right: 5vw;
+  letter-spacing: -0.03em;
 }
 
 @keyframes scroll-left {

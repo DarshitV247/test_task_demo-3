@@ -33,13 +33,25 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
-          scrolled
-            ? "bg-[#041B2D]/95 backdrop-blur-lg shadow-lg"
-            : "bg-gradient-to-b from-black/70 to-transparent"
-        }`}
-      >
+<nav
+  className={`fixed top-0 left-0 right-0 z-[9999] w-full transition-all duration-500 ${
+    scrolled
+      ? "bg-[#041B2D] border-b border-white/10 shadow-lg"
+      : "bg-transparent"
+  }`}
+>
+  <div
+    className="
+      mx-auto
+      flex
+      items-center
+      justify-between
+      w-full
+      max-w-[1600px]
+      px-[clamp(16px,4vw,40px)]
+      py-[4px]
+    "
+  >
         <div
           className="
             mx-auto
@@ -49,93 +61,76 @@ export default function Navbar() {
             w-full
             max-w-[1600px]
             px-[clamp(10px,4vw,60px)]
-            py-[clamp(10px,2vw,18px)]
+            py-[4px]
           "
         >
           {/* Logo */}
-          <Link
-            href="#home"
-            className="
-              flex
-              flex-col
-              leading-none
-              select-none
-            "
-          >
-            <span
-              className="
-                font-black
-                uppercase
-                tracking-tight
-                text-white
-                text-[clamp(1rem,2vw,2rem)]
-              "
-            >
-              Neighborhood
-            </span>
-
-            <span
-              className="
-                font-black
-                uppercase
-                tracking-tight
-                text-[#04A14C]
-                text-[clamp(1rem,2vw,2rem)]
-              "
-            >
-              Wash
-            </span>
-
-            <span
-              className="
-                mt-1
-                uppercase
-                tracking-[0.2em]
-                text-white/60
-                text-[clamp(0.45rem,0.7vw,0.75rem)]
-              "
-            >
-              Pressure Washing Experts
-            </span>
-          </Link>
-
-          {/* Desktop Menu */}
-          <ul
-            className="
-              hidden
-              lg:flex
-              items-center
-              gap-[clamp(20px,2vw,50px)]
-              text-white
-              font-medium
-              text-[clamp(14px,1vw,18px)]
-            "
-          >
-            {links.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="
-                    relative
-                    transition-colors
-                    duration-300
-                    hover:text-[#04A14C]
-                    after:absolute
-                    after:left-0
-                    after:-bottom-2
-                    after:h-[2px]
-                    after:w-0
-                    after:bg-[#04A14C]
-                    after:transition-all
-                    after:duration-300
-                    hover:after:w-full
-                  "
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+<Link
+  href="#home"
+  className="
+    rounded-xl
+    bg-white/10
+    backdrop-blur-md
+    px-3
+    py-2
+    border
+    border-white/10
+  "
+>
+  <img
+  src="/images/logo.png"
+  alt="Neighborhood Wash"
+  className="
+    h-[80px]
+    w-auto
+    object-contain
+    brightness-[1.7]
+    contrast-[1.35]
+    saturate-[1.3]
+    drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]
+  "
+/>
+</Link>
+<ul
+  className={`
+    hidden
+    lg:flex
+    items-center
+    gap-[clamp(22px,2vw,50px)]
+    ${
+      scrolled
+        ? "text-[#04A14C]"
+        : "text-white"
+    }
+  `}
+>
+  {links.map((link) => (
+    <li key={link.name}>
+      <a
+        href={link.href}
+        className="
+          relative
+          font-semibold
+          text-[clamp(15px,1vw,18px)]
+          transition-all
+          duration-300
+          hover:text-[#04A14C]
+          after:absolute
+          after:left-0
+          after:-bottom-2
+          after:h-[2px]
+          after:w-0
+          after:bg-[#04A14C]
+          after:transition-all
+          after:duration-300
+          hover:after:w-full
+        "
+      >
+        {link.name}
+      </a>
+    </li>
+  ))}
+</ul>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-[clamp(15px,2vw,30px)]">
@@ -185,6 +180,7 @@ export default function Navbar() {
           >
             <Menu size={22} />
           </button>
+        </div>
         </div>
       </nav>
 

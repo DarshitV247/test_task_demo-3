@@ -6,6 +6,8 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import FeaturedServices from "./components/FeaturedServices";
 import Footer from "./components/Footer"
 import TestimonialsSection from "./components/TestimonialsSection"
+import BeforeAfterSection from "./components/BeforeAfterSection";
+import FAQSection from "./components/FAQSection";
 
 
 export default function Home() {
@@ -17,7 +19,9 @@ export default function Home() {
        <ScrollingServices />
        <WhyChooseUs />
        <FeaturedServices/>
+       <BeforeAfterSection/>
        <TestimonialsSection/>
+       <FAQSection/>
        <Footer/>
     </>
   );

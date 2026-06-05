@@ -32,11 +32,11 @@ export default function FeaturedServices() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-[#F7F6F3] py-[clamp(3rem,8vw,7rem)]">
+    <section className="bg-[#F7F6F3] py-[clamp(2rem,5vw,5rem)]">
       <div className="mx-auto max-w-[1600px] px-[clamp(12px,4vw,50px)]">
 
         {/* Heading */}
-        <div className="mb-[clamp(2rem,5vw,5rem)] text-center">
+        <div className="mb-[clamp(2rem,4vw,4rem)] text-center">
 
           <p
             className="
@@ -59,18 +59,18 @@ export default function FeaturedServices() {
           <h2
             className="
               mx-auto
-              max-w-6xl
+              max-w-[70vw]
               font-extrabold
-              leading-[0.95]
+              leading-[1.19]
               tracking-[-0.03em]
               text-[#1D2A3B]
-              text-[clamp(2rem,5vw,4.5rem)]
+              text-[clamp(1.8rem,4vw,3.8rem)]
             "
           >
-            Our Company Provides The Best
+            Our Company Provides 
             <br />
             <span className="text-[#04A14C]">
-              Cleaning Service
+              The Best Cleaning Service
             </span>
           </h2>
 
@@ -81,12 +81,12 @@ export default function FeaturedServices() {
           className="
             grid
             items-center
-            gap-[clamp(2rem,5vw,5rem)]
+            gap-[clamp(2rem,4vw,4rem)]
             lg:grid-cols-[0.95fr_1.05fr]
           "
         >
 
-          {/* Image - First on Mobile */}
+          {/* Image */}
           <div className="order-1 lg:order-2">
 
             <div
@@ -95,7 +95,7 @@ export default function FeaturedServices() {
                 overflow-hidden
                 rounded-[clamp(20px,3vw,30px)]
                 shadow-lg
-                h-[clamp(260px,45vw,550px)]
+                h-[clamp(220px,32vw,420px)]
               "
             >
 
@@ -138,7 +138,7 @@ export default function FeaturedServices() {
 
           </div>
 
-          {/* Services - Second on Mobile */}
+          {/* Services */}
           <div className="order-2 lg:order-1">
 
             {services.map((service, index) => (
@@ -154,7 +154,7 @@ export default function FeaturedServices() {
                   justify-between
                   border-b
                   border-slate-200
-                  py-[clamp(14px,2vw,24px)]
+                  py-[clamp(12px,1.5vw,20px)]
                   transition-all
                   duration-300
                 "
@@ -165,7 +165,7 @@ export default function FeaturedServices() {
                     font-bold
                     transition-all
                     duration-300
-                    text-[clamp(1.2rem,2.2vw,2.1rem)]
+                    text-[clamp(1.1rem,1.8vw,1.8rem)]
                     ${
                       activeIndex === index
                         ? "text-[#04A14C]"
@@ -184,8 +184,8 @@ export default function FeaturedServices() {
                     rounded-full
                     transition-all
                     duration-300
-                    h-[clamp(40px,4vw,52px)]
-                    w-[clamp(40px,4vw,52px)]
+                    h-[clamp(38px,3vw,48px)]
+                    w-[clamp(38px,3vw,48px)]
                     ${
                       activeIndex === index
                         ? "bg-[#04A14C]"
@@ -194,7 +194,7 @@ export default function FeaturedServices() {
                   `}
                 >
                   <ArrowRight
-                    size={20}
+                    size={18}
                     className={
                       activeIndex === index
                         ? "text-white"
