@@ -15,8 +15,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Hero Content */}
-      <div className="relative z-10 flex h-full items-center">
-        <div className="max-w-7xl px-12 lg:px-24">
+      <div className="relative z-10 flex h-full items-center pt-16 sm:pt-0">
+        <div className="max-w-7xl px-6 sm:px-8 lg:px-24">
           {/* Animated Heading */}
           <AnimatedHeading />
 
@@ -24,8 +24,10 @@ export default function Hero() {
           <p
             className="
               mt-4
-              max-w-[42vw]
-              text-[clamp(1rem,1.2vw,1.25rem)]
+              max-w-full
+              sm:max-w-[90vw]
+              lg:max-w-[42vw]
+              text-[clamp(0.95rem,3.8vw,1.25rem)]
               leading-[1.7]
               text-white/90
             "
@@ -38,49 +40,48 @@ export default function Hero() {
             absolute best year-round.
           </p>
 
-          {/* CTA Button */}
-        {/* CTA Buttons */}
-<div className="mt-6 flex flex-wrap gap-4">
-  <button
-    className="
-      rounded-full
-      bg-[#04A14C]
-      px-8
-      py-4
-      text-lg
-      font-semibold
-      text-white
-      transition-all
-      duration-300
-      hover:bg-[#038A40]
-      hover:scale-105
-    "
-  >
-    Our Services →
-  </button>
+          {/* CTA Buttons */}
+          <div className="mt-6 flex flex-wrap gap-4">
+            <button
+              className="
+                rounded-full
+                bg-[#04A14C]
+                px-6 sm:px-8
+                py-3 sm:py-4
+                text-[clamp(0.95rem,3.5vw,1.125rem)]
+                font-semibold
+                text-white
+                transition-all
+                duration-300
+                hover:bg-[#038A40]
+                hover:scale-105
+              "
+            >
+              Our Services →
+            </button>
 
-  <button
-    className="
-      rounded-full
-      border-2
-      border-white
-      bg-white/10
-      backdrop-blur-md
-      px-8
-      py-4
-      text-lg
-      font-semibold
-      text-white
-      transition-all
-      duration-300
-      hover:bg-white
-      hover:text-[#041B2D]
-      hover:scale-105
-    "
-  >
-    Get A Quote
-  </button>
-</div>
+            <button
+              className="
+                rounded-full
+                border-2
+                border-white
+                bg-white/10
+                backdrop-blur-md
+                px-6 sm:px-8
+                py-3 sm:py-4
+                text-[clamp(0.95rem,3.5vw,1.125rem)]
+                font-semibold
+                text-white
+                transition-all
+                duration-300
+                hover:bg-white
+                hover:text-[#041B2D]
+                hover:scale-105
+              "
+            >
+              Get A Quote
+            </button>
+          </div>
         </div>
       </div>
     </section>
