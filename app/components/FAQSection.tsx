@@ -41,7 +41,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#F7F6F3] py-16 md:py-24">
+    <section className="relative overflow-hidden bg-[#F7F6F3] py-[6vw]">
       {/* Background Map */}
       <div
         className="
@@ -51,8 +51,7 @@ export default function FAQSection() {
           bg-center
           bg-no-repeat
           bg-contain
-          opacity-[0.06]
-          md:opacity-10
+          opacity-10
         "
       />
 
@@ -61,73 +60,68 @@ export default function FAQSection() {
           relative
           z-10
           mx-auto
-          w-[92%]
+          w-[95vw]
           max-w-[1800px]
         "
       >
         {/* Heading */}
-        <div
-          className="
-            mb-12
-            md:mb-20
-            flex
-            flex-col
-            items-center
-            justify-center
-            text-center
-          "
-        >
-          <p
-            className="
-              mb-3
-              flex
-              items-center
-              justify-center
-              gap-2
-              font-bold
-              uppercase
-              tracking-[0.15em]
-              text-[#04A14C]
-              text-sm
-              md:text-base
-            "
-          >
-            ✓ Frequently Asked Questions
-          </p>
+<div
+  className="
+    mb-[4vw]
+    flex
+    flex-col
+    items-center
+    justify-center
+    text-center
+  "
+>
+  <p
+    className="
+      mb-[0.8vw]
+      flex
+      items-center
+      justify-center
+      gap-[0.5vw]
+      font-bold
+      uppercase
+      tracking-[0.25vw]
+      text-[#04A14C]
+      text-[clamp(12px,0.8vw,16px)]
+    "
+  >
+    ✓ Frequently Asked Questions
+  </p>
 
-          <h2
-            className="
-              mx-auto
-              max-w-full
-              md:max-w-[75vw]
-              lg:max-w-[55vw]
-              font-black
-              leading-[1]
-              text-[#1D2A3B]
-              text-center
-              text-[clamp(2rem,6vw,5.5rem)]
-            "
-          >
-            You Have{" "}
-            <span className="text-[#04A14C]">
-              Questions,
-            </span>
+  <h2
+    className="
+      mx-auto
+      max-w-[55vw]
+      font-black
+      leading-[0.95]
+      text-[#1D2A3B]
+      text-center
+      text-[clamp(2.2rem,4.5vw,5.5rem)]
+    "
+  >
+    You Have{" "}
+    <span className="text-[#04A14C]">
+      Questions,
+    </span>
 
-            <br />
+    <br />
 
-            <span className="text-[#04A14C]">
-              We Have
-            </span>{" "}
-            Answers
-          </h2>
-        </div>
-
+    <span className="text-[#04A14C]">
+      We Have
+    </span>{" "}
+    Answers
+  </h2>
+</div>
         {/* Content */}
         <div
           className="
             grid
             items-center
-            gap-8
+            gap-[2vw]
             lg:grid-cols-[0.95fr_1.05fr]
           "
         >
@@ -136,12 +130,10 @@ export default function FAQSection() {
             className="
               relative
               overflow-hidden
-              rounded-3xl
+              rounded-[1.8vw]
               shadow-xl
-              h-[260px]
-              sm:h-[350px]
-              lg:h-[24vw]
-              lg:min-h-[450px]
+              h-[24vw]
+              min-h-[280px]
             "
           >
             <Image
@@ -152,18 +144,16 @@ export default function FAQSection() {
             />
           </div>
 
-          {/* FAQ Items */}
-          <div className="space-y-4">
+          {/* FAQ */}
+          <div className="space-y-[0.6vw]">
             {faqs.map((faq, index) => (
               <div
                 key={index}
                 className="
                   overflow-hidden
-                  rounded-2xl
+                  rounded-[1.2vw]
                   bg-white
                   shadow-sm
-                  border
-                  border-slate-200
                   transition-all
                   duration-300
                 "
@@ -175,21 +165,16 @@ export default function FAQSection() {
                     w-full
                     items-center
                     justify-between
-                    px-5
-                    py-5
-                    md:px-7
-                    md:py-6
+                    px-[1.8vw]
+                    py-[1vw]
                     text-left
                   "
                 >
                   <span
                     className="
-                      pr-4
                       font-bold
                       text-[#1D2A3B]
-                      text-base
-                      md:text-lg
-                      lg:text-xl
+                      text-[clamp(0.95rem,1.05vw,1.25rem)]
                     "
                   >
                     {faq.question}
@@ -202,7 +187,6 @@ export default function FAQSection() {
                     transition={{
                       duration: 0.3,
                     }}
-                    className="shrink-0"
                   >
                     {activeIndex === index ? (
                       <Minus
@@ -234,19 +218,17 @@ export default function FAQSection() {
                         opacity: 0,
                       }}
                       transition={{
-                        duration: 0.35,
+                        duration: 0.4,
                         ease: "easeInOut",
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-5 md:px-7 md:pb-6">
+                      <div className="px-[1.8vw] pb-[1vw]">
                         <p
                           className="
                             text-slate-600
-                            leading-[1.8]
-                            text-sm
-                            md:text-base
-                            lg:text-lg
+                            leading-[1.7]
+                            text-[clamp(0.85rem,0.9vw,1rem)]
                           "
                         >
                           {faq.answer}
